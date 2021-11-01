@@ -146,10 +146,10 @@
 					                    	<div class="row g-3">
 						                    	<div class="col-sm-6">
 						                    		<label for="comp_cd" class="form-label">회사코드</label>
-						                        		<select class="form-control" id="comp_cd" name="comp_cd">
-						                            		<option value="1">1</option>
-						                            		<option value="2">2</option>
-						                        		</select>
+					                        		<select class="form-control" id="comp_cd" name="comp_cd">
+					                            		<option value="1">1</option>
+					                            		<option value="2">2</option>
+					                        		</select>
 						                		</div>
 						                		<div class="col-sm-6">
 						                    		<label for="plant_cd" class="form-label">공장코드</label>

@@ -7,11 +7,10 @@
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
         <title>Dashboard - SB Admin</title>
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
         <link href="css/styles.css" rel="stylesheet" />
+        <link href="css/index.css" rel="stylesheet" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
     </head>
     <body class="sb-nav-fixed">
@@ -182,10 +181,10 @@
                         </div>
                         <div class="row" align="center">
 							<div class="col-xl-12">
-								<h3>공지사항</h3>
+								<h3 class="h3_1">공지사항</h3>
 								<c:if test="${authUser.id eq 'admin'}">
-						   	     	<div>
-						   	     		<a href="boardinsert.do" class="btn btn-success btn-sm float-end">글쓰기</a>	
+						   	     	<div class="">
+						   	     		<a href="boardinsert.do" class="btn btn-success btn-sm float-end wr_1">글쓰기</a>	
 						   	     	</div>
 						        </c:if>
 								<c:choose>
@@ -226,7 +225,7 @@
 														</c:if>
 													</td>
 													<!--조회수 -->
-													<td><span class="badge badge-success ml-sm-3">${board.boardReadCount}</span></td>
+													<td><span>${board.boardReadCount}</span></td>
 												</tr>
 											</c:forEach>
 										</table>
