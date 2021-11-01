@@ -201,8 +201,8 @@
 												<th>제목</th>
 												<th>작성자</th>
 												<th>날짜</th>
-												<th>첨부파일</th>
 												<th>조회수</th>
+												<th>첨부파일</th>
 											</tr>
 											<c:forEach var="board" items="${boardlist.content}">
 												<tr>
@@ -218,14 +218,14 @@
 													<td>${board.memberid}</td>
 													<!--날짜-->
 													<td>${board.boardDate}</td>
+													<!--조회수 -->
+													<td>${board.boardReadCount}</td>
 													<!--파일-->
 													<td>
-														<c:if test="${!empty board.getBoardFile()}">
-															<a href="boarddownload.do?fn=${board.boardFile}"><i class="fas fa-file-download"></i></a>
-														</c:if>
+													<c:if test="${!empty board.getBoardFile()}">
+														<a href="boarddownload.do?fn=${board.boardFile}"><i class="fas fa-file-download"></i></a>
+													</c:if>
 													</td>
-													<!--조회수 -->
-													<td><span>${board.boardReadCount}</span></td>
 												</tr>
 											</c:forEach>
 										</table>
@@ -234,15 +234,15 @@
 									    <div class="container">
 											<ul class="pagination justify-content-center">	
 												<c:if test="${boardlist.startPage!=1}">
-													<li class="page-item"><a href="main.do?pageno=1" class="page-link">[시작]</a></li>
-													<li class="page-item"><a href="main.do?pageno=${boardlist.startPage-10}" class="page-link">[10페이지 전]</a></li>				
+													<li class="page-item"><a href="main.do?pageno=1" class="page-link pg_1">&#171;</a></li>
+													<li class="page-item"><a href="main.do?pageno=${boardlist.startPage-10}" class="page-link pg_1">&#8249;</a></li>				
 												</c:if>
 												<c:forEach var="pageNum" begin="${boardlist.startPage}" end="${boardlist.endPage}">
 													<li class="page-item"><a class="page-link" href="main.do?pageno=${pageNum}">${pageNum}</a></li>			
 												</c:forEach>
 												<c:if test="${boardlist.endPage < boardlist.totalPage}">
-													<li class="page-item"><a href="main.do?pageno=${boardlist.endPage+1}"  class="page-link">[10페이지 후]</a></li>
-													<li class="page-item"><a href="main.do?pageno=${boardlist.totalPage}"  class="page-link">[끝]</a></li>			
+													<li class="page-item"><a href="main.do?pageno=${boardlist.endPage+1}"  class="page-link pg_1">&#8250;</a></li>
+													<li class="page-item"><a href="main.do?pageno=${boardlist.totalPage}"  class="page-link pg_1">&#187;</a></li>			
 												</c:if> 
 											</ul>
 										</div> 

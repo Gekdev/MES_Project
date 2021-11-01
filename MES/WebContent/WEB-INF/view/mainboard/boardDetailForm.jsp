@@ -130,8 +130,8 @@
 							
 							<div class="form-group">
 								<div class="form-label">내용</div>
-								<div class="input-group-prepend form-control bc_1">
-									${board.boardContent}
+								<div class="input-group-prepend">
+						      		<textarea class="form-control bc_1 form-control" style="resize:none" id="board_content bc_1" name ="boardContent" readonly>${board.boardContent}</textarea>								
 								</div>
 							</div>
 							<c:if test="${board.getBoardFile() != null}" >

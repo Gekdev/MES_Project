@@ -66,7 +66,7 @@ public class BoardModifyHandler implements CommandHandler{
 		
 		/*2. 다운로드 파일 데이터 생성*/	
 		//다운될 파일 경로
-		String saveFolder = "D:\\MainProject\\MES\\WebContent\\WEB-INF\\download";
+		String saveFolder = "C:/Users/Kwongaeun/git/MES_Project/MES/WebContent/WEB-INF/download";
 		//파일사이즈
 		int filesize = 1024 * 1024 * 5;
 		MultipartRequest multi = new MultipartRequest(req, saveFolder, filesize, "utf-8", new DefaultFileRenamePolicy());

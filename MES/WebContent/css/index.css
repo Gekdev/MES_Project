@@ -11,9 +11,18 @@
 }
 
 .bc_1{
-	height: 500px;
+	height: 600px;
+	background: white;
+}
+
+.form-control[readonly]{
+	background: white;
 }
 
 .tt_1{
 	width: 100%;
+}
+
+.pg_1{
+	font-weight: 900;
 }
